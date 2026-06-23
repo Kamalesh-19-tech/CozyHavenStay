@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CozyHavenStay.API.csproj" />
+  <Project Path="..\CozyHavenStay.Tests\CozyHavenStay.Tests.csproj" />
+</Solution>
