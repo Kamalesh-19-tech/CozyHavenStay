@@ -236,7 +236,7 @@ namespace CozyHavenStay.API.Services
                     NoOfAdults = bookingGuests.Count(g => g.IsAdult),
                     NoOfChildren = bookingGuests.Count(g => !g.IsAdult),
                     TotalFare = totalFare,
-                    BookingStatus = "Pending",
+                    BookingStatus = "Confirmed",
                     BookingDate = DateTime.Now
                 };
 
