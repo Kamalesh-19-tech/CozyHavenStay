@@ -1,0 +1,331 @@
+.dashboard-page {
+  background-color: var(--secondary);
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.dashboard-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  background: var(--primary-dark);
+  color: white;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  box-shadow: var(--card-shadow);
+}
+
+.user-info h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.role-badge {
+  background: var(--accent);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.dashboard-content h3 {
+  font-size: 24px;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+.bookings-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.booking-card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 5px solid var(--accent);
+}
+
+.booking-card.upcoming {
+  border-left-color: #2980b9;
+}
+
+.booking-card.checked-in {
+  border-left-color: #27ae60;
+}
+
+.booking-card.completed {
+  border-left-color: #7f8c8d;
+  opacity: 0.9;
+}
+
+.booking-card.cancelled {
+  border-left-color: #e74c3c;
+  opacity: 0.8;
+}
+
+.booking-details {
+  flex: 1;
+}
+
+.booking-id {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.booking-dates {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.booking-stats {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.booking-price-action {
+  text-align: right;
+}
+
+.booking-total {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.status-badge.upcoming {
+  background: #eaf2f8;
+  color: #2980b9;
+  border: 1px solid #a9cce3;
+}
+
+.status-badge.checked-in {
+  background: #eafaf1;
+  color: #27ae60;
+  border: 1px solid #abebc6;
+  animation: pulse-status 2s infinite alternate;
+}
+
+.status-badge.completed {
+  background: #f4f6f7;
+  color: #7f8c8d;
+  border: 1px solid #d5dbdb;
+}
+
+.status-badge.cancelled {
+  background: #fdedec;
+  color: #e74c3c;
+  border: 1px solid #fadbd8;
+}
+
+@keyframes pulse-status {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.4); }
+  100% { transform: scale(1.02); box-shadow: 0 0 6px 2px rgba(39, 174, 96, 0.2); }
+}
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.dashboard-main {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.dashboard-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Guest Stats Cards */
+.guest-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.guest-stat-card {
+  background: white;
+  padding: 15px 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  border-left: 4px solid var(--primary);
+  text-align: left;
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.guest-stat-card h4 {
+  font-size: 20px;
+  margin: 0 0 4px 0;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.guest-stat-card p {
+  margin: 0;
+  font-size: 11.5px;
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Loyalty Card styling */
+.loyalty-card {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  padding: 25px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.loyalty-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.loyalty-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.loyalty-status {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f1c40f;
+  margin-bottom: 15px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loyalty-points-bar {
+  background: rgba(255,255,255,0.15);
+  height: 6px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.loyalty-points-fill {
+  background: #f1c40f;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.loyalty-footer {
+  font-size: 11.5px;
+  color: rgba(255,255,255,0.8);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Sidebar Box */
+.sidebar-box {
+  background: white;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border);
+}
+
+.sidebar-box h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: var(--text-dark);
+  font-weight: 700;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}
+
+.support-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 13.5px;
+  color: var(--text-dark);
+}
+
+.support-item span {
+  font-size: 18px;
+}
+
+@media (max-width: 992px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .guest-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .booking-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .booking-price-action {
+    text-align: left;
+    width: 100%;
+    border-top: 1px solid var(--border);
+    padding-top: 15px;
+  }
+}
