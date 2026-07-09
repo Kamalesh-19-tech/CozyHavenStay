@@ -9,7 +9,7 @@
 
 .payment-container {
   background: white;
-  max-width: 600px;
+  max-width: 800px;
   width: 100%;
   border-radius: var(--border-radius);
   box-shadow: var(--card-shadow);
